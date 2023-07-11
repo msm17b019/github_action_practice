@@ -6,7 +6,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: ${{ vars.IMAGE }}:${{ vars.IMAGE_TAG }}
+    container: 
+      image: ${{ vars.IMAGE }}:${{ vars.IMAGE_TAG }}
     steps:
       - name: env
         run: echo hello
