@@ -1,0 +1,12 @@
+name: env in container name
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: ${{ vars.IMAGE }}
+    steps:
+      - name: env
+        run: echo hello
